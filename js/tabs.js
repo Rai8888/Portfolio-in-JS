@@ -1,6 +1,7 @@
 const tabButtons = document.querySelectorAll('.design-list__item')
 const tabDescriptions = document.querySelectorAll('.design__descr')
 const tabImages = document.querySelectorAll('.design-images')
+const tabSectionImages = document.querySelectorAll('.feature__img')
 
 const changeContent = (array, value) => {
   array.forEach((elem) => {
@@ -17,6 +18,7 @@ tabButtons.forEach((tabButton) => {
 const dataValue = tabButton.dataset.tabsHandler 
 changeContent(tabDescriptions, dataValue)
 changeContent(tabImages, dataValue)
+changeContent(tabSectionImages, dataValue)
 
 tabButtons.forEach((btn) => {
   if (btn === event.target) {
